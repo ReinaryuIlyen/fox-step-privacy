@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fox Step — Privacy Policy</title>
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --fg: #1a1a1a;
+    --muted: #555;
+    --rule: #e5e1d8;
+    --accent: #b35a1f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14110c; --fg: #ece6d7; --muted: #9c9484; --rule: #2a2620; --accent: #d97a3f; }
+  }
+  html { background: var(--bg); color: var(--fg); }
+  body {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    max-width: 38rem;
+    margin: 3rem auto;
+    padding: 0 1.25rem 4rem;
+  }
+  h1 { font-size: 1.75rem; margin: 0 0 0.25rem; letter-spacing: -0.01em; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; color: var(--accent); }
+  .meta { color: var(--muted); font-size: 0.9rem; border-bottom: 1px solid var(--rule); padding-bottom: 1rem; margin-bottom: 1rem; }
+  .meta div { margin: 0.1rem 0; }
+  p, li { margin: 0.5rem 0; }
+  ul { padding-left: 1.25rem; }
+  code { background: var(--rule); padding: 0.05rem 0.3rem; border-radius: 3px; font-size: 0.92em; }
+  a { color: var(--accent); }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<h1>Fox Step Privacy Policy</h1>
+
+<div class="meta">
+  <div><strong>Effective date:</strong> May 12, 2026</div>
+  <div><strong>App:</strong> Fox Step (<code>com.foxstep.app</code>)</div>
+  <div><strong>Operator:</strong> Kay Dunn (<a href="mailto:senkaydunn@gmail.com">senkaydunn@gmail.com</a>)</div>
+</div>
+
+<p>Fox Step is a personal step and walk tracker. This policy explains what data the app collects, where it goes, and how to remove it.</p>
+
+<h2>What the app collects</h2>
+
+<ul>
+  <li><strong>Step counts</strong> from your phone's built-in step counter sensor.</li>
+  <li><strong>Walk traces.</strong> When you start a walk, the app records GPS points until you tap End walk. Tracking runs as a foreground service with a persistent notification — never in the background without your knowledge.</li>
+  <li><strong>Health Connect data,</strong> if you grant permission. The app reads step and exercise records to cross-validate the sensor count and backfill history. After a walk ends, the app can write the walk back to Health Connect as an exercise session.</li>
+</ul>
+
+<h2>Where the data lives</h2>
+
+<p>By default, everything stays on your phone in an encrypted local database.</p>
+
+<p>If you sign in (optional, via an emailed magic-link code), the app syncs your steps, walks, and exercise records to a server at <code>api.kaysplayground.com</code> that Kay Dunn operates personally on Cloudflare Workers. The connection is HTTPS-encrypted. Without sign-in, no data leaves your device.</p>
+
+<h2>Who else sees the data</h2>
+
+<p>No one. The app shares no data with advertisers, analytics services, or any third party. Resend delivers the sign-in code email; the email contains only the six-digit code, no app data.</p>
+
+<h2>How long it's kept</h2>
+
+<ul>
+  <li><strong>On your phone:</strong> until you uninstall the app or delete entries yourself.</li>
+  <li><strong>On the server</strong> (only if you signed in): until you delete your account. Account deletion uses a 30-day grace period — sign in again within that window to cancel deletion. After 30 days, the server wipes your data permanently.</li>
+  <li><strong>In Health Connect:</strong> Health Connect manages its own storage. Uninstalling Fox Step does not remove records the app wrote to Health Connect.</li>
+</ul>
+
+<h2>How to delete the data</h2>
+
+<ul>
+  <li><strong>App data on your phone:</strong> uninstall, or use Settings → Diagnostics within the app.</li>
+  <li><strong>Server data:</strong> Settings → Account → Delete account.</li>
+  <li><strong>Health Connect entries:</strong> open the Health Connect app → Data → Exercise → remove Fox Step entries.</li>
+</ul>
+
+<h2>Security</h2>
+
+<p>Local data sits in a SQLCipher-encrypted database. The encryption key lives in the Android Keystore. All network traffic uses HTTPS.</p>
+
+<h2>Children</h2>
+
+<p>Fox Step is not intended for users under 13, in line with Health Connect's age requirement.</p>
+
+<h2>Changes to this policy</h2>
+
+<p>Updates will appear on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+
+<p>Questions or data requests: <a href="mailto:senkaydunn@gmail.com">senkaydunn@gmail.com</a>.</p>
+
+<footer>
+  Source: <a href="https://github.com/ReinaryuIlyen/fox-step-privacy">github.com/ReinaryuIlyen/fox-step-privacy</a>
+</footer>
+
+</body>
+</html>
